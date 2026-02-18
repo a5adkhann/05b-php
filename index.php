@@ -1,9 +1,11 @@
 <?php
-// $test = "05b batch";
+$test = ["Ali", "Hassan", "Huzaifa"];
 // echo $test;
+// var_dump($test);
+print_r($test);
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -13,12 +15,12 @@
 <body>
 
 	<?php
-	$content = "Mixing HTML with PHP";
-	$color = "red";
+	// $content = "Mixing HTML with PHP";
+	// $color = "red";
 	
 	?>
 
 	<h1 style="color: <?php echo $color;?>"> <?php echo $content;?> </h1>
 	
 </body>
-</html>
+</html> -->
