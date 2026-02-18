@@ -8,8 +8,6 @@
 // }
 
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +20,7 @@
 <body>
     <form method="POST" action="logics.php">
         <input type="text" name="nameField">
+        <input type="email" name="emailField">
 
         <input type="submit" name="submitBtn">
     </form>
