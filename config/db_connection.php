@@ -9,10 +9,10 @@ $connection = mysqli_connect($hostname, $username, $password, $dbname);
 
 
 if($connection){
-    echo "DB Connected Succesfully";
+    echo "<script>alert('DB Connected')</script>";
 }
 else {
-    echo "Error Connecting Database";
+    echo "<script>alert('Error')</script>";
 }
 
 
