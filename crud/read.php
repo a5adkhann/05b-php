@@ -1,6 +1,9 @@
 <?php
 include("../config/db_connection.php");
 
+if(!isset($_SESSION['loggedEmail'])){
+    header("location: ./auth/login.php");
+}
 
 if(isset($_GET['ID'])){
     $delete_query = "DELETE FROM users WHERE id = $_GET[ID]";
@@ -24,6 +27,8 @@ if(isset($_GET['ID'])){
 <body>
     <br>
     <a href="create.php">Add new User</a>
+
+    <a href="./auth/logout.php">Logout</a>
     <table border="1" cellspacing = "0" cellpadding = "5">
         <tr>
             <th>Name</th>

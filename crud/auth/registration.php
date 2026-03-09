@@ -6,7 +6,7 @@ if(isset($_POST['registerBtn'])){
     $emailFieldValue = $_POST['emailField'];
     $passwordFieldValue = $_POST['passwordField'];
 
-    $insert_query = "INSERT INTO auth(auth_name, auth_email, auth_password) VALUES('$nameFieldValue', '$emailFieldValue', '$passwordFieldValue')";
+    $insert_query = "INSERT INTO users(name, email, password) VALUES('$nameFieldValue', '$emailFieldValue', '$passwordFieldValue')";
 
     $result = mysqli_query($connection, $insert_query);
 

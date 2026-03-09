@@ -2,7 +2,32 @@
 include("../../config/db_connection.php");
 
 if(isset($_POST['loginBtn'])){
-    
+    $emailFieldValue = $_POST['emailField'];
+    $passwordFieldValue = $_POST['passwordField'];
+
+    $select_query = "SELECT * FROM users WHERE email = '$emailFieldValue' AND password = '$passwordFieldValue'";
+
+    $result = mysqli_query($connection, $select_query);
+
+    $count = mysqli_num_rows($result);
+
+    if($count > 0){
+        $display = mysqli_fetch_array($result);
+        $_SESSION['loggedEmail'] = $display['email'];
+        $_SESSION['loggedPassword'] = $display['password'];
+        
+        echo "<script>
+        alert('Login Successfully');
+        location.assign('../read.php');
+        </script>";
+    }
+    else {
+        echo "<script>
+        alert('Invalid Credentials');
+        location.assign('login.php');
+        </script>";
+    }
+
 }
 
 

@@ -1,6 +1,12 @@
 <?php
 include("../config/db_connection.php");
 
+if(!isset($_SESSION['loggedEmail'])){
+    header("location: ./auth/login.php");
+}
+
+
+
 if(isset($_POST['submitBtn'])){
     $nameFieldValue = $_POST['nameField'];
     $messageFieldValue = $_POST['messageField'];
